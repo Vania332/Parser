@@ -1,9 +1,6 @@
 from abc import ABC, abstractmethod
 from models import Source
-<<<<<<< HEAD
 from sqlalchemy.ext.asyncio import AsyncSession
-=======
->>>>>>> database-realization
 
 
 class SourceRepository(ABC):
@@ -29,15 +26,10 @@ class SourceRepository(ABC):
     
 class SQLSourceRepository(SourceRepository):
     """SQL implementation of SourceRepository interface."""
-<<<<<<< HEAD
+
     def __init__(self, session: AsyncSession):
         self.session = session
         
     async def add(self, source: Source) -> Source: 
         self.session.add(source)
         
-        
-=======
-    
->>>>>>> database-realization
-    
